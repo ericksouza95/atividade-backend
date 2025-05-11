@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bem-vindo</title>
+</head>
+<body>
+    <h2>Bem-vindo, {{ username }}!</h2>
+    <ul>
+        <li><a href="{{ url_for('musicas_page') }}">Lista de Músicas</a></li>
+        <li><a href="{{ url_for('logout') }}">Sair</a></li>
+    </ul>
+</body>
+</html>

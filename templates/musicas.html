@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Músicas</title>
+</head>
+<body>
+    <h2>Minhas Músicas</h2>
+
+    <form method="POST">
+        <input type="text" name="musica" placeholder="Nome da música">
+        <button type="submit" name="action" value="add">Adicionar</button>
+        <button type="submit" name="action" value="remove">Remover</button>
+    </form>
+
+    <form method="GET">
+        <input type="text" name="search" placeholder="Buscar música">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <ul>
+    {% for musica in musicas %}
+        <li>{{ musica }}</li>
+    {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('home') }}">Voltar ao Menu</a>
+</body>
+</html>
